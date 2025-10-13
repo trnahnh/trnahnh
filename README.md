@@ -1,5 +1,7 @@
 ## Hi there, I'm Anh Tran. People usually call me Andrea with second 'a' silent!
 
+## I'm currently a sophomore majoring in Computer Engineering at the University of Cincinnati!
+
 💻 Passionate about computer engineering, coding, and technology innovation.<br/>
 🌐 Interested in full-stack development, automation, and building robust web applications.<br/>
 🔬 Drawn to robotics, digital systems, and hands-on experimentation with real-world solutions.<br/>
