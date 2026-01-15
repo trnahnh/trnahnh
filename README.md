@@ -4,7 +4,6 @@
 
 💻 Passionate about computer engineering, coding, and technology innovation.<br/>
 🌐 Interested in full-stack development, automation, and building robust web applications.<br/>
-🔬 Drawn to robotics, digital systems, and hands-on experimentation with real-world solutions.<br/>
 📚 Always exploring new tools, programming languages, and frameworks to expand my skill set.<br/>
 
 ## 🌐 Socials:
