@@ -1,4 +1,4 @@
-# Hi there, I'm Anh Tran. People usually call me Andrea with second 'a' silent!
+# Hi there, I'm Anh Tran. Feel free to connect!
 
 ## Computer Engineering @ University of Cincinnati
 
