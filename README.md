@@ -10,6 +10,8 @@ I don't build apps. I build engines.
 
 ### What I'm shipping
 
+**[RG2026-Predict](https://github.com/trnahnh/rg2026-predict)** - ML pipeline predicting the Roland Garros 2026 winner. XGBoost on 37 temporal features from 75K+ ATP matches. 65.2% accuracy, 0.714 AUC. 10K Monte Carlo bracket simulations with isotonic calibration.
+
 **[Ferrox](https://github.com/trnahnh/ferrox)** - Order matching engine in Rust. 500ns P99 latency. 4.7M orders/sec. Zero hot-path allocations. Lock-free SPSC ring buffers. mmap WAL for crash recovery under 1.4ms.
 
 **[Draft-Thinker](https://github.com/trnahnh/draft-thinker)** - Cost-aware LLM gateway in Go. Entropy-based routing, speculative execution via goroutines, semantic cache layer.
@@ -29,7 +31,7 @@ Systems     Rust, Go, C/C++
 Backend     Node.js, Bun, FastAPI, Spring Boot, Chi, Gin, Hono
 Frontend    Vue/Nuxt, React/Next, Tailwind
 Data        PostgreSQL, Redis, MongoDB, ChromaDB, S3
-AI/ML       LangChain/LangGraph, scikit-learn, NumPy, Gemini
+AI/ML       XGBoost, Optuna, LangChain/LangGraph, scikit-learn, pandas, matplotlib, seaborn, NumPy
 Infra       Docker, AWS, Nginx, GitHub Actions, CI/CD, Linux
 ```
 
