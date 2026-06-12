@@ -50,7 +50,7 @@ I don't build apps. I build engines.
 
 <div align="center">
 
-**Open To:** Fall 2026 Co-op · Big Tech SWE Roles · Systems Engineering · ML Infrastructure
+**Open To:** Fall 2026 Co-op · Quant Finance Internships · Big Tech SWE Roles · Systems Engineering · ML Infrastructure
 
 </div>
 
@@ -91,7 +91,7 @@ I don't build apps. I build engines.
 </div>
 
 <details>
-<summary><b>Commma — Pace your Code</b></summary>
+<summary><b>Commma — Developer Activity Tracker</b></summary>
 
 <br/>
 
@@ -298,7 +298,7 @@ The encryption model ensures that even a full database compromise exposes no use
 </div>
 
 **Founder & CTO** · *Commma*
-`May 2026 – Present`
+`2025 – Present`
 
 Founding and building an end-to-end developer activity tracking platform from zero — VSCode extension, REST API, and web app — shipping across the full monorepo as sole technical decision-maker.
 
@@ -396,7 +396,7 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=trnahnh&show_icons=true&theme=gruvbox&include_all_commits=true&count_private=true&hide_border=true&bg_color=141210&title_color=E8541A&icon_color=E8541A&text_color=E8E0D0"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=trnahnh&show_icons=true&theme=gruvbox&hide_border=true&bg_color=141210&title_color=E8541A&icon_color=E8541A&text_color=E8E0D0"/>
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=trnahnh&layout=compact&langs_count=8&theme=gruvbox&hide_border=true&bg_color=141210&title_color=E8541A&text_color=E8E0D0"/>
 
 </div>
@@ -432,24 +432,6 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 <div align="center">
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=trnahnh&bg_color=141210&color=E8E0D0&line=E8541A&point=E8E0D0&area=true&area_color=2A1F18&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-<div align="center">
-
-## Contribution Snake
-
-</div>
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/trnahnh/trnahnh/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/trnahnh/trnahnh/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/trnahnh/trnahnh/output/github-contribution-grid-snake-dark.svg">
-</picture>
 
 </div>
 
