@@ -323,9 +323,9 @@ Founding and building an end-to-end developer activity tracking platform from ze
 
 Leading 6 engineers building an end-to-end distributed real-time messaging and study-matching platform across the full product lifecycle, from architecture to production operations.
 
-- Engineered a distributed real-time messaging system using Socket.IO, PostgreSQL, and Redis, cutting average API response times by 60% and sustaining 1,700+ requests/minute over 30 days of production traffic
-- Scaled the backend study-matching platform to 400+ active users through sprint planning and code reviews using Nuxt 3 and Node.js
-- Achieved p50 median response times under 400ms by architecting a Vue-based frontend with optimistic updates, lazy loading, and input debouncing, hardened with JWT, OAuth 2.0, and Typebox schema validation
+- Engineering an end-to-end distributed real-time messaging system using Socket.IO, PostgreSQL, and Redis, reducing average API response time from 60s to 10s and sustaining 1.7K+ requests/minute over 30 days of traffic
+- Scaled a backend study-matching platform to 400+ active users by leading 6 engineers through sprint planning and code reviews using Nuxt 3 and Node.js across the full product lifecycle
+- Architected a Vue frontend with lazy loading, and input debouncing; migrated infrastructure to AWS (CloudFront, S3, EC2), cutting page load times by 400% and server queries by 40% with p50 page loads under 400ms
 
 ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
