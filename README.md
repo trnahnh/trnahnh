@@ -107,7 +107,7 @@ A full-stack developer activity platform turning the editor into a logbook — p
 |**Auth**       |GitHub OAuth · JWT access tokens · HTTP-only rotating refresh tokens                                              |
 |**Billing**    |Stripe Pro/Team subscriptions · Signature-verified webhooks                                                       |
 |**Deployment** |EC2 t3.micro + PM2 · S3 + CloudFront · Neon PostgreSQL · Upstash Redis                                         |
-|**Repository** |[github.com/NauriFive/commma-coding-progress-tracker](https://github.com/NauriFive/commma-coding-progress-tracker)|
+|**Repository** |[github.com/trnahnh/commma-coding-progress-tracker](https://github.com/trnahnh/commma-coding-progress-tracker)|
 |**Live**       |[commma.vercel.app](https://commma.vercel.app)                                                                    |
 
 </div>
