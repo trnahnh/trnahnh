@@ -25,7 +25,7 @@
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -54,7 +54,7 @@ I don't build apps. I build engines.
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -82,7 +82,7 @@ I don't build apps. I build engines.
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -99,16 +99,16 @@ A full-stack developer activity platform turning the editor into a logbook — p
 
 <div align="center">
 
-|Attribute      |Detail                                                                                                            |
-|:--------------|:-----------------------------------------------------------------------------------------------------------------|
-|**Stack**      |TypeScript, React 19, Vite, Tailwind v4, Hono, Node.js, PostgreSQL, Redis                                         |
-|**Extension**  |VSCode API · Key-label tracking · Privacy modes · Offline queue                                                   |
-|**Performance**|Sub-second session ingestion · Redis sorted sets for leaderboard queries                                          |
-|**Auth**       |GitHub OAuth · JWT access tokens · HTTP-only rotating refresh tokens                                              |
-|**Billing**    |Stripe Pro/Team subscriptions · Signature-verified webhooks                                                       |
-|**Deployment** |EC2 t4.small + PM2 · S3 + CloudFront · Neon PostgreSQL · Upstash Redis                                         |
-|**Repository** |[github.com/trnahnh/commma-coding-progress-tracker](https://github.com/trnahnh/commma-coding-progress-tracker)|
-|**Live**       |[commma.vercel.app](https://commma.vercel.app)                                                                    |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | TypeScript, React 19, Vite, Tailwind v4, Hono, Node.js, PostgreSQL, Redis |
+| **Extension** | VSCode API · Key-label tracking · Privacy modes · Offline queue |
+| **Performance** | Sub-second session ingestion · Redis sorted sets for leaderboard queries |
+| **Auth** | GitHub OAuth · JWT access tokens · HTTP-only rotating refresh tokens |
+| **Billing** | Stripe Pro/Team subscriptions · Signature-verified webhooks |
+| **Deployment** | EC2 t4g (Graviton) + PM2 · S3 + CloudFront · Neon PostgreSQL · Upstash Redis · Terraform |
+| **Repository** | [github.com/NauriFive/commma-coding-progress-tracker](https://github.com/NauriFive/commma-coding-progress-tracker) |
+| **Live** | [commma.dev](https://commma.dev) |
 
 </div>
 
@@ -118,7 +118,7 @@ The extension captures key labels — never key content — across three configu
 
 </details>
 
------
+---
 
 <details>
 <summary><b>Ferrox — Order Matching Engine</b></summary>
@@ -129,16 +129,16 @@ A production-grade central limit order book matching engine written in Rust, arc
 
 <div align="center">
 
-|Attribute          |Detail                                                                               |
-|:------------------|:------------------------------------------------------------------------------------|
-|**Stack**          |Rust, Atomics, mmap WAL, Criterion, HdrHistogram                                     |
-|**Scale**          |4.7M orders/second sustained throughput                                              |
-|**Performance**    |500ns P99 tick-to-trade latency · Zero hot-path heap allocations                     |
-|**Memory**         |1M-slot pre-allocated arena · Doubly linked list order book                          |
-|**Concurrency**    |Lock-free SPSC ring buffer · Acquire/Release memory ordering · 64B cache-line padding|
-|**Reliability**    |mmap write-ahead log · Crash recovery under 1.4ms                                    |
-|**Throughput Gain**|8.8x improvement from lock-free SPSC design                                          |
-|**Repository**     |[github.com/trnahnh/ferrox](https://github.com/trnahnh/ferrox)                       |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Rust, Atomics, mmap WAL, Criterion, HdrHistogram |
+| **Scale** | 4.7M orders/second sustained throughput |
+| **Performance** | 500ns P99 tick-to-trade latency · Zero hot-path heap allocations |
+| **Memory** | 1M-slot pre-allocated arena · Doubly linked list order book |
+| **Concurrency** | Lock-free SPSC ring buffer · Acquire/Release memory ordering · 64B cache-line padding |
+| **Reliability** | mmap write-ahead log · Crash recovery under 1.4ms |
+| **Throughput Gain** | 8.8x improvement from lock-free SPSC design |
+| **Repository** | [github.com/trnahnh/ferrox](https://github.com/trnahnh/ferrox) |
 
 </div>
 
@@ -148,7 +148,7 @@ Built to match or exceed the performance profile of institutional-grade matching
 
 </details>
 
------
+---
 
 <details>
 <summary><b>Draft-Thinker — Cost-Aware LLM Gateway</b></summary>
@@ -159,15 +159,15 @@ A high-performance LLM routing gateway written in Go that cuts inference costs b
 
 <div align="center">
 
-|Attribute         |Detail                                                                       |
-|:-----------------|:----------------------------------------------------------------------------|
-|**Stack**         |Go, OpenAI API, Qdrant, Redis, Prometheus, Grafana, Docker                   |
-|**Cost Reduction**|91.6% inference cost savings · 94% of requests handled by drafter model      |
-|**Routing**       |Real-time Shannon entropy analysis of token logprobabilities                 |
-|**Accuracy**      |98.2% accuracy on 518-prompt benchmark                                       |
-|**Cache**         |Vector search + TTL eviction · Cosine similarity ≥ 0.95 · Sub-50ms cache hits|
-|**Observability** |Prometheus metrics · Grafana dashboards                                      |
-|**Repository**    |[github.com/trnahnh/draft-thinker](https://github.com/trnahnh/draft-thinker) |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Go, OpenAI API, Qdrant, Redis, Prometheus, Grafana, Docker |
+| **Cost Reduction** | 91.6% inference cost savings · 94% of requests handled by drafter model |
+| **Routing** | Real-time Shannon entropy analysis of token logprobabilities |
+| **Accuracy** | 98.2% accuracy on 518-prompt benchmark |
+| **Cache** | Vector search + TTL eviction · Cosine similarity ≥ 0.95 · Sub-50ms cache hits |
+| **Observability** | Prometheus metrics · Grafana dashboards |
+| **Repository** | [github.com/trnahnh/draft-thinker](https://github.com/trnahnh/draft-thinker) |
 
 </div>
 
@@ -177,7 +177,7 @@ The entropy router evaluates token-level confidence distributions from the draft
 
 </details>
 
------
+---
 
 <details>
 <summary><b>Inyeon — Agentic AI Git Assistant</b></summary>
@@ -188,15 +188,15 @@ A multi-agent AI assistant for software engineering workflows, built on a LangGr
 
 <div align="center">
 
-|Attribute        |Detail                                                                         |
-|:----------------|:------------------------------------------------------------------------------|
-|**Stack**        |Python, FastAPI, LangGraph, ChromaDB, scikit-learn, NumPy, Typer               |
-|**Architecture** |7-agent orchestration pipeline with cost-optimized caching and short-circuiting|
-|**Performance**  |100ms median response latency                                                  |
-|**Test Coverage**|245+ test cases · 100% unit and integration branch coverage                    |
-|**Build Speed**  |95% Docker build time reduction (49s → 2.1s)                                   |
-|**Memory**       |RAG-powered ChromaDB across 4 clustering strategies via scikit-learn           |
-|**Repository**   |[github.com/trnahnh/inyeon](https://github.com/trnahnh/inyeon)                 |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Python, FastAPI, LangGraph, ChromaDB, scikit-learn, NumPy, Typer |
+| **Architecture** | 7-agent orchestration pipeline with cost-optimized caching and short-circuiting |
+| **Performance** | 100ms median response latency |
+| **Test Coverage** | 245+ test cases · 100% unit and integration branch coverage |
+| **Build Speed** | 95% Docker build time reduction (49s → 2.1s) |
+| **Memory** | RAG-powered ChromaDB across 4 clustering strategies via scikit-learn |
+| **Repository** | [github.com/trnahnh/inyeon](https://github.com/trnahnh/inyeon) |
 
 </div>
 
@@ -206,7 +206,7 @@ Each agent in the pipeline is scoped to a discrete responsibility: intent classi
 
 </details>
 
------
+---
 
 <details>
 <summary><b>KatanaID — AI Branding Toolkit</b></summary>
@@ -217,14 +217,14 @@ A production-deployed AI branding platform written in Go, generating brand ident
 
 <div align="center">
 
-|Attribute      |Detail                                                           |
-|:--------------|:----------------------------------------------------------------|
-|**Stack**      |Go, Gemini AI, Ent ORM, PostgreSQL, goroutines                   |
-|**Concurrency**|19+ parallel API calls per request via goroutine fan-out         |
-|**Performance**|Sub-200ms response times · 2,300+ requests/day in production     |
-|**Security**   |Trust score engine · Browser fingerprinting · k6 stress tested   |
-|**Data Layer** |Ent ORM type-safe PostgreSQL · Zero schema-related runtime errors|
-|**Deployment** |Production · [katanaid.com](https://katanaid.com)                |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Go, React, Gemini AI, Ent ORM, PostgreSQL, goroutines, Railway, Vercel |
+| **Concurrency** | 19+ parallel API calls per request via goroutine fan-out |
+| **Performance** | Sub-200ms response times · 2,300+ requests/day in production |
+| **Security** | Trust score engine · Browser fingerprinting · k6 stress tested |
+| **Data Layer** | Ent ORM type-safe PostgreSQL · Zero schema-related runtime errors |
+| **Deployment** | Production · [katanaid.com](https://katanaid.com) |
 
 </div>
 
@@ -234,7 +234,7 @@ The fan-out architecture dispatches all generative API calls simultaneously at r
 
 </details>
 
------
+---
 
 <details>
 <summary><b>Caphne — Real-Time Study Matching Platform</b></summary>
@@ -245,14 +245,16 @@ A real-time peer study matching platform serving 400+ active users at FPT Univer
 
 <div align="center">
 
-|Attribute      |Detail                                                                 |
-|:--------------|:----------------------------------------------------------------------|
-|**Stack**      |Nuxt 3, Vue, Node.js, Socket.IO, PostgreSQL, Redis                     |
-|**Scale**      |1,700+ requests/minute · 400+ active users · 30 days production traffic|
-|**Performance**|p50 median response under 400ms · 60% API response time reduction      |
-|**Frontend**   |Vue optimistic updates · Lazy loading · Input debouncing               |
-|**Security**   |JWT · OAuth 2.0 · Typebox schema validation                            |
-|**Deployment** |Production · [caphne.co](https://caphne.co)                            |
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Nuxt 3, Vue 3, shadcn-vue, Tailwind, Express.js, Socket.IO, PostgreSQL, Drizzle ORM, Redis |
+| **Scale** | 1,700+ requests/minute · 400+ active users · 30 days production traffic |
+| **Performance** | p50 median response under 400ms · 60% API response time reduction |
+| **Frontend** | Vue optimistic updates · Lazy loading · Input debouncing |
+| **Auth** | Email OTP via Resend · OAuth via Passport.js (Google, GitHub) |
+| **Infra** | EC2 (SSM deploys) · S3 + CloudFront · Terraform · GitHub Actions CI/CD |
+| **Security** | JWT · OAuth 2.0 · Typebox schema validation |
+| **Deployment** | Production · [caphne.co](https://caphne.co) |
 
 </div>
 
@@ -262,7 +264,7 @@ The Redis layer serves presence state and match candidates from memory, keeping 
 
 </details>
 
------
+---
 
 <details>
 <summary><b>Dasi — End-to-End Encrypted Journal</b></summary>
@@ -273,13 +275,13 @@ A privacy-first journaling application with end-to-end encryption — thoughts a
 
 <div align="center">
 
-|Attribute         |Detail                                                                                            |
-|:-----------------|:-------------------------------------------------------------------------------------------------|
-|**Stack**         |Go, Chi, PostgreSQL, React, TypeScript, AWS Lambda, Resend                                        |
-|**Security**      |On-device encryption before sync · Server sees only ciphertext                                    |
-|**Infrastructure**|AWS Lambda serverless compute                                                                     |
-|**Notifications** |Resend transactional email for daily prompts                                                      |
-|**Repository**    |[github.com/NauriFive/dasi-encrypted-journal](https://github.com/NauriFive/dasi-encrypted-journal)|
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Go, Chi, PostgreSQL, React, TypeScript, AWS Lambda, Resend |
+| **Security** | On-device encryption before sync · Server sees only ciphertext |
+| **Infrastructure** | AWS Lambda serverless compute |
+| **Notifications** | Resend transactional email for daily prompts |
+| **Repository** | [github.com/NauriFive/dasi-encrypted-journal](https://github.com/NauriFive/dasi-encrypted-journal) |
 
 </div>
 
@@ -289,7 +291,35 @@ The encryption model ensures that even a full database compromise exposes no use
 
 </details>
 
------
+---
+
+<details>
+<summary><b>AnyuDock — S3 File Storage & Config Sharing</b></summary>
+
+<br/>
+
+A brutalist-by-design S3 file storage platform for sharing files and environment configs between machines. Private by default, public on demand — files stay locked to the owner until explicitly toggled, with share links available for public files only.
+
+<div align="center">
+
+| Attribute | Detail |
+|:---|:---|
+| **Stack** | Hono, Bun, Drizzle ORM, PostgreSQL, React, TanStack Router/Query, Tailwind, Vite |
+| **Storage** | Any S3-compatible provider · Privacy toggle per file · Share link generation |
+| **Auth** | Email OTP via Resend · JWT session cookies |
+| **API** | File upload, list, preview, download, privacy toggle, share links |
+| **Deployment** | Production · [anyudock.cloud](https://anyudock.cloud) |
+| **Repository** | [github.com/NauriFive/anyudock](https://github.com/NauriFive/anyudock) |
+
+</div>
+
+Files are private by default on upload — private files are owner-only for preview and management, while public files are downloadable by anyone with the file ID. Share links are generated only for public files, keeping accidental exposure impossible by design.
+
+<br/>
+
+</details>
+
+---
 
 <div align="center">
 
@@ -297,16 +327,16 @@ The encryption model ensures that even a full database compromise exposes no use
 
 </div>
 
-**Founder & CTO** · *Commma*
+**Founder & CTO** · *Commma* · [commma.dev](https://commma.dev) · [LinkedIn](https://www.linkedin.com/company/commma-dev/)
 `May 2026 – Present · Cincinnati, OH`
 
-Founding and building an end-to-end developer activity tracking platform from zero — VSCode extension, REST API, and web app — shipping across the full monorepo as sole technical decision-maker.
+Founding and building an end-to-end developer activity tracking platform from zero — VSCode extension, REST API, and web app — shipping across the full monorepo as sole technical decision-maker. Phases 1–4 complete and live in production; Phase 5 (mobile, PWA, JetBrains/Neovim plugins, CLI, self-hosted Docker stack) in progress.
 
 - Architected a pnpm monorepo across three apps (extension, API, web) and two shared packages (schema, DB) with strict TypeScript boundaries
 - Built the VSCode extension with key-label tracking, three configurable privacy modes, and an offline queue for resilient event delivery
 - Designed and implemented GitHub OAuth, JWT access tokens, HTTP-only rotating refresh tokens, and Stripe Pro/Team billing with webhook signature verification
-- Engineered Canvas-based keyboard heatmap rendering with PNG export in three aspect ratios for social sharing
-- Deployed on EC2 t3.micro with PM2, S3 + CloudFront for the web layer, Railway PostgreSQL, and Upstash Redis
+- Engineered Canvas-based keyboard heatmap rendering with PNG export in three aspect ratios for social sharing, plus a server-side OG image variant via sharp
+- Deployed on EC2 t4g (Graviton) with PM2, S3 + CloudFront for the web layer, Neon PostgreSQL, Upstash Redis, and Terraform for infra-as-code with S3-locked remote state
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
@@ -315,26 +345,29 @@ Founding and building an end-to-end developer activity tracking platform from ze
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 
------
+---
 
 **Lead Software Engineer** · *Caphne*
 `Jan 2026 – Present · Ho Chi Minh, Vietnam`
 
 Leading 6 engineers building an end-to-end distributed real-time messaging and study-matching platform across the full product lifecycle, from architecture to production operations.
 
-- Engineering an end-to-end distributed real-time messaging system using Socket.IO, PostgreSQL, and Redis, reducing average API response time from 60s to 10s and sustaining 1.7K+ requests/minute over 30 days of traffic
-- Scaled a backend study-matching platform to 400+ active users by leading 6 engineers through sprint planning and code reviews using Nuxt 3 and Node.js across the full product lifecycle
-- Architected a Vue frontend with lazy loading, and input debouncing; migrated infrastructure to AWS (CloudFront, S3, EC2), cutting page load times by 400% and server queries by 40% with p50 page loads under 400ms
+- Engineered a distributed real-time messaging system using Socket.IO, PostgreSQL, and Redis, cutting average API response times by 60% and sustaining 1,700+ requests/minute over 30 days of production traffic
+- Scaled the backend study-matching platform to 400+ active users through sprint planning and code reviews using Nuxt 3 and Node.js
+- Achieved p50 median response times under 400ms by architecting a Vue-based frontend with optimistic updates, lazy loading, and input debouncing, hardened with JWT, OAuth 2.0, and Typebox schema validation
 
 ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=flat-square&logo=socketdotio&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 
------
+---
 
 **Founding Engineer** · *KatanaID*
 `Dec 2025 – Present · Remote`
@@ -346,11 +379,14 @@ Co-founding and leading 5 engineers to architect a scalable AI branding intellig
 - Eliminated schema-related runtime errors by leveraging Ent ORM for a strictly type-safe PostgreSQL layer, enabling reliable large-scale brand data synchronization across distributed API sources
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Gemini](https://img.shields.io/badge/Gemini%20AI-4285F4?style=flat-square&logo=google&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
------
+---
 
 **Technical Assistant Intern** · *Vietcombank*
 `May 2025 – Jul 2025 · Hue, Vietnam`
@@ -363,7 +399,7 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Networking](https://img.shields.io/badge/Networking-0078D4?style=flat-square&logo=cisco&logoColor=white)
 
------
+---
 
 <div align="center">
 
@@ -373,20 +409,20 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 
 <div align="center">
 
-|Recognition          |Details                                                                   |
-|:-------------------:|:-------------------------------------------------------------------------|
-|GPA Honor Roll       |3.71 / 4.0 · University of Cincinnati · Computer Engineering              |
-|Production Deployment|Commma — full-stack developer activity tracker · EC2 + S3 + CloudFront    |
-|Production Deployment|KatanaID — 2,300+ req/day · AI branding platform · 5-engineer team        |
-|Production Deployment|Caphne — 400+ users · 1,700+ req/min · FPT University network             |
-|LLM Cost Engineering |91.6% inference cost reduction · 98.2% accuracy · 518-prompt benchmark    |
-|Systems Performance  |500ns P99 matching engine latency · 4.7M orders/sec · 8.8x throughput gain|
-|Full Test Coverage   |245+ test cases · 100% branch coverage · 95% Docker build time reduction  |
-|Team Leadership      |Led 6-engineer team (Caphne) · 5-engineer team (KatanaID)                 |
+| Recognition | Details |
+|:---:|:---|
+| GPA Honor Roll | 3.71 / 4.0 · University of Cincinnati · Computer Engineering |
+| Production Deployment | Commma — live at commma.dev · EC2 t4g + S3 + CloudFront + Terraform · Phases 1–4 complete |
+| Production Deployment | KatanaID — 2,300+ req/day · AI branding platform · 5-engineer team |
+| Production Deployment | Caphne — 400+ users · 1,700+ req/min · FPT University network |
+| LLM Cost Engineering | 91.6% inference cost reduction · 98.2% accuracy · 518-prompt benchmark |
+| Systems Performance | 500ns P99 matching engine latency · 4.7M orders/sec · 8.8x throughput gain |
+| Full Test Coverage | 245+ test cases · 100% branch coverage · 95% Docker build time reduction |
+| Team Leadership | Led 6-engineer team (Caphne) · 5-engineer team (KatanaID) |
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -407,7 +443,7 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -421,7 +457,7 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 
 </div>
 
------
+---
 
 <div align="center">
 
@@ -438,11 +474,11 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 
 </div>
 
------
+---
 
 <div align="center">
 
-*The bottleneck is never the algorithm. It’s the engineer who stops measuring.*
+*The bottleneck is never the algorithm. It's the engineer who stops measuring.*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=141210,2A1F18,E8541A,1A1210&height=120&section=footer&animation=fadeIn" />
 
