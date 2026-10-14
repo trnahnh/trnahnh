@@ -101,7 +101,7 @@ I don't build apps. I build engines.
 
 <br/>
 
-A Kubernetes-native internal developer platform that replaces ticket-and-Terraform provisioning with self-service infrastructure. Features a custom scheduler plugin, a statistically rigorous canary controller, and a fail-closed policy gate integrating 6 subsystems behind one unified path.
+A Kubernetes-native internal developer platform that replaces ticket-and-Terraform provisioning with self-service infrastructure. Features a custom scheduler plugin, a statistically rigorous canary controller, and a fail-closed policy gate integrating 6 subsystems behind one unified path. Placed zero latency-class workloads on spot capacity, validated across 57,012 replayed placements on a 12,477-machine public cluster trace.
 
 <div align="center">
 
@@ -113,6 +113,7 @@ A Kubernetes-native internal developer platform that replaces ticket-and-Terrafo
 | **Provisioning** | Self-service path reaching Ready at 11s p50 · Replaced hours-to-day ticket-and-Terraform flow |
 | **Safety** | Fail-closed policy gate integrating 6 subsystems |
 | **Seeded Tests** | Caught 100% of 1,000 seeded regressions |
+| **Controller** | Lifted controller-runtime 20qps/30burst limit · Cut 12-min timeout to 3m58s |
 | **Repository** | [github.com/trnahnh/kiln-idp](https://github.com/trnahnh/kiln-idp) |
 
 </div>
@@ -130,7 +131,7 @@ The custom scheduler plugin bin-packs workloads against real utilization metrics
 
 <br/>
 
-A full-stack developer activity platform turning the editor into a logbook — pace, splits, streaks, and leaderboards as rituals of a real sport, applied to code. A VSCode/Open VSX extension captures editor activity in real time; a Hono API ingests and aggregates sessions; a React web app surfaces session detail, streaks, leaderboards, and shareable keyboard heatmap cards. Live at 100% availability over 30 days with 500+ downloads.
+A full-stack developer activity platform turning the editor into a logbook — pace, splits, streaks, and leaderboards as rituals of a real sport, applied to code. A VSCode/Open VSX extension captures editor activity in real time; a Hono API ingests and aggregates sessions; a React web app surfaces session detail, streaks, leaderboards, and shareable keyboard heatmap cards. Live at 100% availability over 30 days with 600+ downloads.
 
 <div align="center">
 
@@ -167,18 +168,19 @@ A production-grade central limit order book matching engine written in Rust, arc
 
 | Attribute | Detail |
 |:---|:---|
-| **Stack** | Rust, Atomics, mmap WAL, Criterion, HdrHistogram |
+| **Stack** | Rust, C++, Atomics, mmap WAL, Criterion, HdrHistogram |
 | **Scale** | 4.7M orders/second sustained throughput |
 | **Performance** | 500ns P99 tick-to-trade latency · Zero hot-path heap allocations |
 | **Memory** | 1M-slot pre-allocated arena · Fixed-point prices · HashMap-to-BTreeMap swap trading 9-22% insert regression for 67-85% cancel latency cut |
 | **Concurrency** | Lock-free SPSC ring buffer · Acquire/Release over SeqCst to avoid unnecessary fence instructions · 64B cache-line padding · 8.8x throughput gain over std::sync::mpsc |
-| **Reliability** | mmap write-ahead log · Crash recovery under 1.4ms |
+| **C++ Port** | Ported lock-free ring buffer to C++20 · Acquire/Release elides all x86 fences vs 5.4-6.0x SeqCst penalty · Isolated Rust's 1.5-3.5x single-threaded gap to runtime bounds-check overhead |
+| **Reliability** | mmap write-ahead log · Crash recovery under 1.4ms · Crash-consistency fault injection zeroing 714 failures across 92,525 records · Fixed 2 silent-corruption bugs |
 | **Deployment** | AWS Fargate · NLB at 70% of total hourly cost |
 | **Repository** | [github.com/trnahnh/ferrox](https://github.com/trnahnh/ferrox) |
 
 </div>
 
-Built to match or exceed the performance profile of institutional-grade matching engines. The design eliminates all dynamic memory allocation on the critical execution path, using a pre-allocated arena and stack-pinned message passing throughout. The WAL layer guarantees durability without sacrificing microsecond-level recovery windows, verified end-to-end via HdrHistogram latency measurement under Criterion benchmarks.
+Built to match or exceed the performance profile of institutional-grade matching engines. The design eliminates all dynamic memory allocation on the critical execution path, using a pre-allocated arena and stack-pinned message passing throughout. Ported the lock-free ring buffer to C++20, confirming Acquire/Release elides all x86 fences versus a 5.4-6.0x SeqCst penalty, then isolated Rust's 1.5-3.5x single-threaded gap to its runtime bounds-check overhead. Fixed two silent-corruption bugs via crash-consistency fault injection, zeroing 714 failures across 92,525 records. The WAL layer guarantees durability without sacrificing microsecond-level recovery windows, verified end-to-end via HdrHistogram latency measurement under Criterion benchmarks.
 
 <br/>
 
@@ -202,7 +204,7 @@ A high-performance LLM routing gateway written in Go that cuts inference costs b
 | **Routing** | Machine learning entropy router using top-k logprobs from OpenAI API |
 | **Accuracy** | 98.1% on benchmark |
 | **Diagnosis** | Identified confidence-threshold baseline ceiling at 61.5% from OpenAI logprob-reporting artifact affecting 65.5% of creative prompts — entropy routing structurally avoids this |
-| **Speculative Execution** | Goroutine pipeline · 5-10% compute waste on 30% of requests |
+| **Speculative Execution** | Found cancelled speculative calls would cost 80-88% of the all-heavyweight bill · Recommending speculation stay off |
 | **Cache** | Vector search + TTL eviction · Cosine similarity ≥ 0.95 · Sub-50ms cache hits |
 | **Observability** | Prometheus metrics · Grafana dashboards |
 | **Repository** | [github.com/trnahnh/draft-thinker](https://github.com/trnahnh/draft-thinker) |
@@ -365,10 +367,14 @@ Files are private by default on upload — private files are owner-only for prev
 
 </div>
 
-**Incoming AI Researcher** · *University of Cincinnati Department of Computer Science*
+**AI Researcher** · *University of Cincinnati Department of Computer Science*
 `Aug 2026 – Present · Cincinnati, OH`
 
-Building AI-driven voice modification and exercise-recommendation modules (e.g., PerMod) in Dr. Novak's lab for TruVox, an existing gender-affirming voice training platform, alongside its deployment infrastructure.
+Building AI-driven voice modification and exercise-recommendation modules (e.g., PerMod) in Dr. Novak's lab for TruVox, a gender-affirming voice training platform, alongside its deployment infrastructure.
+
+- Achieved 15x voice-resynthesis speedup (5.5s → 0.36s) via LPC pole-warping and LP-PSOLA
+- Fixed an LPC stability bug by adding a Schur-Cohn test, preventing unstable filter coefficients
+- Found 3 measurement bugs in the existing evaluation pipeline
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![AI/ML](https://img.shields.io/badge/AI%2FML-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
@@ -378,7 +384,7 @@ Building AI-driven voice modification and exercise-recommendation modules (e.g.,
 **Founder & CTO** · *Commma* · [commma.dev](https://commma.dev) · [LinkedIn](https://www.linkedin.com/company/commma-dev/)
 `May 2026 – Present · Cincinnati, OH`
 
-Building commma.dev end-to-end — a TypeScript monorepo spanning a VSCode/Open VSX extension, a Hono/Postgres API, and a React SPA — live on AWS at 100% availability over 30 days with 500+ downloads.
+Building commma.dev end-to-end — a TypeScript monorepo spanning a VSCode/Open VSX extension, a Hono/Postgres API, and a React SPA — live on AWS at 100% availability over 30 days with 600+ downloads.
 
 - Built the VSCode extension with key-label tracking, three configurable privacy modes, and an offline queue for resilient event delivery
 - Replaced BullMQ/Redis with an interval scanner, holding Redis commands near 0 against a 500K/mo budget cap
@@ -460,13 +466,13 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 | Recognition | Details |
 |:---:|:---|
 | GPA Honor Roll | 3.77 / 4.0 · University of Cincinnati · Computer Engineering |
-| AI Research | Incoming researcher in Dr. Novak's lab · TruVox voice training platform |
-| Production Deployment | Commma — live at commma.dev · 100% availability over 30 days · 500+ downloads · 271K events load-tested |
+| AI Research | Researcher in Dr. Novak's lab · TruVox · 15x voice-resynthesis speedup (5.5s → 0.36s) |
+| Production Deployment | Commma — live at commma.dev · 100% availability over 30 days · 600+ downloads · 271K events load-tested |
 | Production Deployment | KatanaID — 2,300+ req/day · AI branding platform · 5-engineer team |
 | Production Deployment | Caphne — 400+ users · 1,700+ req/min · FPT University network |
-| Platform Engineering | Kiln-IDP — 45.5% cluster spend reduction · 11s p50 provisioning · 100% regression detection |
+| Platform Engineering | Kiln-IDP — 45.5% cluster spend reduction · 11s p50 provisioning · 100% regression detection · 57,012 replayed placements validated |
 | LLM Cost Engineering | 82.9% inference cost reduction · 98.1% accuracy · Bootstrapped 95% CI |
-| Systems Performance | 500ns P99 matching engine latency · 4.7M orders/sec · 8.8x throughput gain · AWS Fargate deployed |
+| Systems Performance | 500ns P99 matching engine latency · 4.7M orders/sec · 8.8x throughput gain · C++20 port confirming 5.4-6.0x SeqCst penalty · 714 fault-injection failures zeroed |
 | Full Test Coverage | 245+ test cases · 100% branch coverage · 95% Docker build time reduction |
 | Team Leadership | Led 6-engineer team (Caphne) · 5-engineer team (KatanaID) |
 
