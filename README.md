@@ -52,7 +52,7 @@ I don't build apps. I build engines.
 
 <div align="center">
 
-**Open To:** Summer 2027 Co-op · Quant Finance Internships · AI/ML Research · Big Tech SWE Roles · Systems & Platform Engineering
+**Open To:** Summer 2027 Co-op · Big Tech SWE Roles · Quant Finance Internships · AI/ML Research · Systems & Platform Engineering
 
 </div>
 
@@ -224,7 +224,7 @@ The entropy router evaluates token-level confidence distributions from the draft
 
 <br/>
 
-A multi-agent AI assistant for software engineering workflows, built on a LangGraph orchestration backbone with a FastAPI runtime and ChromaDB vector memory. Handles the full spectrum of developer requests through a 7-agent pipeline with 100ms median response time and 100% test coverage across 245+ cases.
+An agentic Git CLI that splits, commits, reviews, and opens PRs in one command, built on a LangGraph orchestration backbone with a FastAPI runtime and ChromaDB vector memory. 93.3% valid Conventional Commits vs 66.7% hand-written, with 100ms median response time and 100% test coverage across 245+ cases.
 
 <div align="center">
 
@@ -372,24 +372,26 @@ Files are private by default on upload — private files are owner-only for prev
 
 Building AI-driven voice modification and exercise-recommendation modules (e.g., PerMod) in Dr. Novak's lab for TruVox, a gender-affirming voice training platform, alongside its deployment infrastructure.
 
-- Achieved 15x voice-resynthesis speedup (5.5s → 0.36s) via LPC pole-warping and LP-PSOLA
-- Fixed an LPC stability bug by adding a Schur-Cohn test, preventing unstable filter coefficients
-- Found 3 measurement bugs in the existing evaluation pipeline
+- Cut voice-resynthesis time 15x (5.5s → 0.36s) via LPC pole-warping and LP-PSOLA, profiling pitch tracking to 89% of runtime, then swapping in a 4x decimated autocorrelation search over an 8x option that halved accuracy
+- Fixed an LPC bug destroying 97.7% of output frames with a Schur-Cohn test, 100x cheaper than root-finding
+- Found and fixed 3 measurement bugs that had silently corrupted previously collected study data
 
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![AI/ML](https://img.shields.io/badge/AI%2FML-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 
 ---
 
-**Founder & CTO** · *Commma* · [commma.dev](https://commma.dev) · [LinkedIn](https://www.linkedin.com/company/commma-dev/)
+**Founder & Lead Engineer** · *Commma* · [commma.dev](https://commma.dev) · [LinkedIn](https://www.linkedin.com/company/commma-dev/)
 `May 2026 – Present · Cincinnati, OH`
 
-Building commma.dev end-to-end — a TypeScript monorepo spanning a VSCode/Open VSX extension, a Hono/Postgres API, and a React SPA — live on AWS at 100% availability over 30 days with 600+ downloads.
+Building commma.dev, a coding-activity tracker with 600+ downloads on VS Code and Open VSX, as a TypeScript monorepo (extension, Hono REST API, PostgreSQL, React SPA) on AWS via Terraform.
 
+- Made coding-time totals hold under concurrency and crashes: 2,390 sessions vs 1,220 expected and 35/40 SIGKILL trials losing Redis leaderboard time, both to 0 with a PostgreSQL advisory lock and a transactional outbox
+- Verified privacy (no editor content sent) with fast-check property tests: 9,000 randomized runs over 361,455 synthetic edit events found 0 leaks, and all 4 deliberately injected leaks were caught
+- Cut ingest's privacy lookup p50 70% (42ms to 13ms) with a Redis cache, then closed a 60s stale-cache race
 - Built the VSCode extension with key-label tracking, three configurable privacy modes, and an offline queue for resilient event delivery
-- Replaced BullMQ/Redis with an interval scanner, holding Redis commands near 0 against a 500K/mo budget cap
-- Enforced a keys-only privacy guarantee at two layers: extension never reads editor content, API re-derives privacy mode from a Redis-cached lookup, cutting p50 latency from 42ms to 13ms
-- Load-tested the live stack to 271K events / 4,447 sessions with zero 5xx, then traced a local connection-pool win that didn't reproduce in prod to client bandwidth, not the server
 - Deployed on EC2 t4g (Graviton) with PM2, S3 + CloudFront for the web layer, Neon PostgreSQL, Upstash Redis, and Terraform for infra-as-code with S3-locked remote state
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -466,14 +468,14 @@ Maintained banking infrastructure reliability and drove digital adoption across 
 | Recognition | Details |
 |:---:|:---|
 | GPA Honor Roll | 3.77 / 4.0 · University of Cincinnati · Computer Engineering |
-| AI Research | Researcher in Dr. Novak's lab · TruVox · 15x voice-resynthesis speedup (5.5s → 0.36s) |
+| AI Research | Researcher in Dr. Novak's lab · TruVox · 15x voice-resynthesis speedup · 97.7% frame-destruction bug fixed · 3 measurement bugs caught |
 | Production Deployment | Commma — live at commma.dev · 100% availability over 30 days · 600+ downloads · 271K events load-tested |
 | Production Deployment | KatanaID — 2,300+ req/day · AI branding platform · 5-engineer team |
 | Production Deployment | Caphne — 400+ users · 1,700+ req/min · FPT University network |
 | Platform Engineering | Kiln-IDP — 45.5% cluster spend reduction · 11s p50 provisioning · 100% regression detection · 57,012 replayed placements validated |
 | LLM Cost Engineering | 82.9% inference cost reduction · 98.1% accuracy · Bootstrapped 95% CI |
 | Systems Performance | 500ns P99 matching engine latency · 4.7M orders/sec · 8.8x throughput gain · C++20 port confirming 5.4-6.0x SeqCst penalty · 714 fault-injection failures zeroed |
-| Full Test Coverage | 245+ test cases · 100% branch coverage · 95% Docker build time reduction |
+| Full Test Coverage | 245+ test cases · 100% branch coverage · 95% Docker build time reduction · 9,000 fast-check runs over 361K synthetic events |
 | Team Leadership | Led 6-engineer team (Caphne) · 5-engineer team (KatanaID) |
 
 </div>
